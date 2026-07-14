@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BemoleC/BemoleC.csproj" />
+  </Folder>
+  <Folder Name="/src/Bemole.Build.Tasks/">
+    <Project Path="src/Bemole.Sdk/Bemole.Sdk.csproj" />
+  </Folder>
+</Solution>

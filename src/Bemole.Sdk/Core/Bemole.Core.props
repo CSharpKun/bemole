@@ -1,0 +1,9 @@
+<Project>
+
+    <PropertyGroup>
+        <DefaultLanguageSourceExtension>.bm</DefaultLanguageSourceExtension>
+    </PropertyGroup>
+
+    <Import Project="Bemole.ProjectSystem.props"/>
+
+</Project>

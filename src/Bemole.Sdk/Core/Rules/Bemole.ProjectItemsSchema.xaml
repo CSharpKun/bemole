@@ -1,0 +1,12 @@
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+
+    <ContentType Name="BemoleFile" DisplayName="Bemole file" ItemType="Compile">
+    </ContentType>
+
+    <ItemType Name="Compile" DisplayName="Bemole compiler" />
+    <ItemType Name="AdditionalFiles" DisplayName="Bemole analyzer additional file" />
+    <ItemType Name="EditorConfigFiles" DisplayName=".editorconfig file" />
+
+    <FileExtension Name=".bm" ContentType="BemoleFile" />
+
+</ProjectSchemaDefinitions>

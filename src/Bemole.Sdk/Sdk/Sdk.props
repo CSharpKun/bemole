@@ -1,0 +1,12 @@
+<Project>
+
+    <!-- Indicate whether `Bemole.Sdk` is being used. -->
+    <PropertyGroup>
+        <UsingBemoleSdk>true</UsingBemoleSdk>
+    </PropertyGroup>
+
+    <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props"/>
+
+    <Import Project="..\Core\Bemole.Core.props" Condition="'$(MSBuildProjectExtension)' == '.bmproj'"/>
+
+</Project>

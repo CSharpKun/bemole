@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsTool>true</IsTool>
+    <AssemblyName>Bemole.Build.Tasks</AssemblyName>
+    <RootNamespace>Bemole.Build.Tasks</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <EnableDefaultBuildItems>true</EnableDefaultBuildItems>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <Description>No</Description>
+
+  </PropertyGroup>
+
+  <PropertyGroup Label="BuildInfo">
+    <IsPublishable>false</IsPublishable>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <BuildOutputTargetFolder>Tasks</BuildOutputTargetFolder>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+  </PropertyGroup>
+
+  <PropertyGroup Label="PackageInfo">
+    <PackageId>Bemole.Sdk</PackageId>
+    <Version>1.7</Version>
+    <PackageType>MSBuildSdk</PackageType>
+    <PackageTags>msbuild sdk Bemole</PackageTags>
+    <Description>MSBuild SDK for Bemole</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <RepositoryUrl>https://github.com/furesoft/LanguageSdk.Templates</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Project Rule Definitions -->
+    <Content Include="**\*.xaml" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <None Include=".\core\**" Pack="true" PackagePath="core\" />
+    <None Include=".\Tasks\**" Pack="true" PackagePath="Tasks\" />
+    <None Include=".\Sdk\**" Pack="true" PackagePath="Sdk\" />
+    <None Include="bin\$(Configuration)\*.dll" Pack="true" PackagePath="Tasks\bin\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DistIL.Core" Version="0.13.0-preview" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="18.7.1" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="18.7.1" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="18.7.1" />
+    <PackageReference Include="Silverfly" Version="1.7.0" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BemoleC\BemoleC.csproj" />
+    <PackageReference Include="LanguageSdk.Templates.Core" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
