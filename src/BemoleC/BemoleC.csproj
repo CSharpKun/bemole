@@ -14,10 +14,8 @@
     <PackageReference Include="DistIL.Core" Version="0.13.0-preview" />
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="18.7.1" />
     <PackageReference Include="Microsoft.Build.Utilities.Core" Version="18.7.1" />
-    <PackageReference Include="Mono.Cecil" Version="0.11.6" />
     <PackageReference Include="LanguageSdk.Templates.Core" Version="2.0.0" />
     <PackageReference Include="Silverfly" Version="1.7.0" />
-    <PackageReference Include="sly" Version="3.8.0" />
     <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.9" />
   </ItemGroup>
 

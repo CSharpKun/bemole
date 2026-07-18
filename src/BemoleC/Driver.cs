@@ -25,7 +25,7 @@ public class Driver
 
         return new Driver
         {
-            Compilation = compilation,
+            Compilation = compilation, 
             Settings = settings,
             Optimizer = optimizer
         };
@@ -33,6 +33,11 @@ public class Driver
 
     public SourceDocument[] Compile()
     {
+        foreach (var item in Settings.Sources)
+        {
+            var file = File.ReadAllText(item);
+        }
+
         return [];
     }
 }

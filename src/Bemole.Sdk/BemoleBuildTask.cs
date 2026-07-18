@@ -1,20 +1,19 @@
 ﻿using System.IO;
 using System.Linq;
 using LanguageSdk.Templates.Core;
-using Microsoft.Build.Framework;
-using Microsoft.Build.Utilities;
 using BemoleC;
 using Silverfly.Text;
 
 namespace Bemole.Build.Tasks;
 
-public class BemoleBuildTask : LanguageSdk.Templates.Core.BuildTask<DriverSettings>
+public class BemoleBuildTask : BuildTask<DriverSettings>
 {
     protected override bool Execute(DriverSettings settings)
     {
         var driver = Driver.Create(settings);
 
         foreach (var reference in ReferencePaths)
+        {
             try
             {
                 // Driver.moduleResolver.Load(reference.ItemSpec);
@@ -22,8 +21,9 @@ public class BemoleBuildTask : LanguageSdk.Templates.Core.BuildTask<DriverSettin
             catch
             {
             }
+        }
 
-        foreach(var er in EmbeddedResources)
+        foreach (var er in EmbeddedResources)
         {
             var name = Path.GetFileName(er.ItemSpec);
             driver.Compilation.Module.CreateEmbeddedResource(name, File.ReadAllBytes(er.ItemSpec));

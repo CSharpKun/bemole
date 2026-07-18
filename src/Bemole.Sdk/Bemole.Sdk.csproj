@@ -21,12 +21,12 @@
 
   <PropertyGroup Label="PackageInfo">
     <PackageId>Bemole.Sdk</PackageId>
-    <Version>1.7</Version>
+    <Version>0.2</Version>
     <PackageType>MSBuildSdk</PackageType>
     <PackageTags>msbuild sdk Bemole</PackageTags>
     <Description>MSBuild SDK for Bemole</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <RepositoryUrl>https://github.com/furesoft/LanguageSdk.Templates</RepositoryUrl>
+    <RepositoryUrl>https://github.com/CSharpKun/bemole</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
